@@ -16,3 +16,8 @@ The data is split evenly with 25k reviews intended for training and 25k for test
 4. cd aclImdb && mkdir movie_data
 5. for split in train test; do for sentiment in pos neg; do for file in $split/$sentiment/*; do cat $file >> movie_data/full_${split}.txt; echo >> movie_data/full_${split}.txt; done; done; done;
 
+## Analysis
+- Text Processing: Stemming/Lemmatizing to convert different forms of each word into one.
+- n-grams: Instead of just single-word tokens (1-gram/unigram),word pairs were included.
+- Representations: Instead of simple, binary vectors, word counts or TF-IDF was chosen to transform those counts.
+- Algorithms: In addition to Logistic Regression, Support Vector Machines was used.
